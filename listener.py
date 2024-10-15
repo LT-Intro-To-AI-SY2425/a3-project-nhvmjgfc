@@ -6,7 +6,7 @@ import time
 
 recording = []
 is_recording = False
-sample_rate = 44100
+sample_rate = 48000
 target_callback = None
 
 
