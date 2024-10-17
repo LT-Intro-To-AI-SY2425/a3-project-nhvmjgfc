@@ -83,7 +83,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "we fell in love in october",
         "girl in red",
-        "rock",
+        "alt",
         184,
         2018,
     ),
@@ -97,7 +97,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "see you again",
         "tyler the creator",
-        "rap",
+        "pop",
         180,
         2017,
     ),
@@ -109,11 +109,11 @@ music_db: List[Tuple[str,str,str,int,int]]=[
         2023,
     ),
     (
-        "corazon sin cara",
-        "prince royce",
-        "bachata",
-        211,
-        2010,
+        "da fonk",
+        "mochakk",
+        "funk",
+        366,
+        2022,
     ),
     (
         "you should see me in a crown",
@@ -125,7 +125,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "when we ride",
         "chris travis",
-        "hip hop",
+        "rap",
         206,
         2012,
     ),
