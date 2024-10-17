@@ -62,14 +62,14 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "cherry waves",
         "deftones",
-        "alt rock",
+        "rock",
         317,
         2006,
     ),
     (
         "only if",
         "steve lacy",
-        "alt r&b",
+        "r&b",
         100,
         2019,
     ),
@@ -83,7 +83,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "we fell in love in october",
         "girl in red",
-        "alt/indie",
+        "rock",
         184,
         2018,
     ),
@@ -97,7 +97,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "see you again",
         "tyler the creator",
-        "pop rap",
+        "rap",
         180,
         2017,
     ),
@@ -118,6 +118,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "you should see me in a crown",
         "billie eilish",
+        "pop",
         180,
         2019,
     ),
@@ -138,7 +139,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
     (
         "tu es foutu",
         "conki",
-        "house",
+        "electronic dance",
         124,
         2022,
     ),
