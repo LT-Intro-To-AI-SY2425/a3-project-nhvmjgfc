@@ -143,4 +143,39 @@ music_db: List[Tuple[str,str,str,int,int]]=[
         124,
         2022,
     ),
+    (
+        "movin' out",
+        "billy joel",
+        "rock",
+        121,
+        1977
+    ),
+    (
+        "lose yourself",
+        "eminem",
+        "rap",
+        321,
+        2002
+    ),
+    (
+        "end of the road",
+        "boys 2 men",
+        "r&b",
+        351,
+        1991
+    ),
+    (
+        "back to black",
+        "amy whinehouse",
+        "r&b",
+        241,
+        2006
+    ),
+    (
+        "7",
+        "catfish and the bottlemen",
+        "alt",
+        254,
+        2016
+    )
 ]
