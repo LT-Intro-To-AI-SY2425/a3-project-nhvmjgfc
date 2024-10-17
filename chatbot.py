@@ -1,5 +1,5 @@
 from match import match
-from music2 import music_db
+from music import music_db
 
 def get_title(musicinfo):
     return musicinfo[0]
