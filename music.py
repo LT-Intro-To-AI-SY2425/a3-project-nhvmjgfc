@@ -4,11 +4,11 @@ from typing import List, Tuple
 
 music_db: List[Tuple[str,str,str,int,int]]=[
     (
-        "tengo motivos", #title
-        "junior h", #artist
-        "regional mexican", #genre
-        187, #length
-        2020, #year released
+        "dejame entrar", #title
+        "rauw alejandro", #artist
+        "funk", #genre
+        254, #length
+        2024, #year released
     ),
     (
         "paper soldier", 
