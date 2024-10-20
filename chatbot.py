@@ -1,17 +1,22 @@
 from match import match
 from music import music_db
 
+
 def get_title(musicinfo):
     return musicinfo[0]
+
 
 def get_artist(musicinfo):
     return musicinfo[1]
 
+
 def get_genre(musicinfo):
     return musicinfo[2]
 
+
 def get_length(musicinfo):
     return int(musicinfo[3])
+
 
 def get_year(musicinfo):
     return int(musicinfo[4])
@@ -21,7 +26,7 @@ def title_by_year(matches):
     year = int(matches[0])
 
     result = filter(lambda songinfo: get_year(songinfo) == year, music_db)
-    result = list(map(lambda songinfo : get_title(songinfo), result))
+    result = list(map(lambda songinfo: get_title(songinfo), result))
     return result
 
 
@@ -29,8 +34,35 @@ def title_by_year_range(matches):
     startYear = int(matches[0])
     endYear = int(matches[1])
 
-    result = filter(lambda songinfo: get_year(songinfo) >= startYear and get_year(songinfo) <= endYear, music_db)
-    result = list(map(lambda songinfo : get_title(songinfo), result))
+    result = filter(lambda songinfo: get_year(songinfo) >=
+                    startYear and get_year(songinfo) <= endYear, music_db)
+    result = list(map(lambda songinfo: get_title(songinfo), result))
+    return result
+
+
+def title_by_length_range(matches):
+    startLength = int(matches[0])
+    endLength = int(matches[1])
+
+    result = filter(lambda songinfo: get_length(songinfo) >=
+                    startLength and get_length(songinfo) <= endLength, music_db)
+    result = list(map(lambda songinfo: get_title(songinfo), result))
+    return result
+
+
+def title_shorter_length(matches):
+    length = int(matches[0])
+
+    result = filter(lambda songinfo: get_length(songinfo) < length, music_db)
+    result = list(map(lambda songinfo: get_title(songinfo), result))
+    return result
+
+
+def title_longer_length(matches):
+    length = int(matches[0])
+
+    result = filter(lambda songinfo: get_length(songinfo) > length, music_db)
+    result = list(map(lambda songinfo: get_title(songinfo), result))
     return result
 
 
@@ -38,7 +70,7 @@ def title_before_year(matches):
     year = int(matches[0])
 
     result = filter(lambda songinfo: get_year(songinfo) < year, music_db)
-    result = list(map(lambda songinfo : get_title(songinfo), result))
+    result = list(map(lambda songinfo: get_title(songinfo), result))
     return result
 
 
@@ -46,7 +78,7 @@ def title_after_year(matches):
     year = int(matches[0])
 
     result = filter(lambda songinfo: get_year(songinfo) > year, music_db)
-    result = list(map(lambda songinfo : get_title(songinfo), result))
+    result = list(map(lambda songinfo: get_title(songinfo), result))
     return result
 
 
@@ -67,9 +99,13 @@ def year_by_title(matches):
 
     return list(map(lambda songinfo: get_year(songinfo), filter(lambda songinfo: get_title(songinfo) == title, music_db)))
 
+
 pa_list = [
     (str.split("what songs were made in _"), title_by_year),
     (str.split("what songs were made between _ and _"), title_by_year_range),
+    (str.split("what songs are between _ and _ in length"), title_by_length_range),
+    (str.split("what songs are longer than _ in length"), title_longer_length),
+    (str.split("what songs are shorter than _ in length"), title_shorter_length),
     (str.split("what songs were made before _"), title_before_year),
     (str.split("what songs were made after _"), title_after_year),
     (str.split("who produced %"), artist_by_title),
