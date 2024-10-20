@@ -177,5 +177,54 @@ music_db: List[Tuple[str,str,str,int,int]]=[
         "alt",
         254,
         2016
+    ),
+    (
+        "it runs through me",
+        "tom misch",
+        "alt",
+        261,
+        2018
+    ),
+    (
+        "505",
+        "arctic monkeys",
+        "rock",
+        253,
+        2007
+    ),
+    (
+        "hi(gher)",
+        "overpade",
+        "rap",
+        148,
+        2021
+    ),
+    (
+        "bruh",
+        "jump man 93",
+        "alt",
+        154,
+        2023
+    ),
+    (
+        "life",
+        "the walters",
+        "alt",
+        200,
+        2014
+    ),
+    (
+        "notion",
+        "the rare occasions",
+        "rock",
+        195,
+        2016
+    ),
+    (
+        "a devil's touch in the midwest",
+        "macabre plaza",
+        "rock",
+        68,
+        2021
     )
 ]
