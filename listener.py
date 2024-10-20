@@ -49,7 +49,7 @@ def start(callback):
     target_callback = callback
     try:
         with sd.InputStream(callback=audio_callback, channels=1, samplerate=sample_rate):
-            print("Press the spacebar to start/stop recording. Use Ctrl+C to exit.")
+            print("Hold the spacebar to start recording, release to stop. Use Ctrl+C to exit.")
             while True:
                 time.sleep(0.1)
     except KeyboardInterrupt:
