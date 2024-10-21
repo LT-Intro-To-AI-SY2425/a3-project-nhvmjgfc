@@ -18,7 +18,7 @@ music_db: List[Tuple[str,str,str,int,int]]=[
         2023,
     ),
     (
-        "b.o.r. (birth of rap)",
+        "birth of rap",
         "lil b",
         "rap",
         233,
