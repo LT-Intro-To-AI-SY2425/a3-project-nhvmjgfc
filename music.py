@@ -4,13 +4,6 @@ from typing import List, Tuple
 
 music_db: List[Tuple[str,str,str,int,int]]=[
     (
-        "dejame entrar", #title
-        "rauw alejandro", #artist
-        "funk", #genre
-        254, #length
-        2024, #year released
-    ),
-    (
         "paper soldier", 
         "brent faiyaz", 
         "r&b", 
@@ -23,13 +16,6 @@ music_db: List[Tuple[str,str,str,int,int]]=[
         "rap",
         151,
         2023,
-    ),
-    (
-        "desenfocao'",
-        "rauw alejandro",
-        "funk",
-        170,
-        2021,
     ),
     (
         "b.o.r. (birth of rap)",
@@ -134,13 +120,6 @@ music_db: List[Tuple[str,str,str,int,int]]=[
         "ken carson",
         "rap",
         231,
-        2022,
-    ),
-    (
-        "tu es foutu",
-        "conki",
-        "electronic dance",
-        124,
         2022,
     ),
     (
