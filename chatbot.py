@@ -93,6 +93,10 @@ def title_by_artist(matches):
 
     return list(map(lambda songinfo: get_title(songinfo), filter(lambda songinfo: get_artist(songinfo) == artist, music_db)))
 
+def title_by_genre(matches):
+    genre = matches[0]
+
+    return list(map(lambda songinfo: get_title(songinfo), filter(lambda songinfo: get_genre(songinfo) == genre, music_db)))
 
 def year_by_title(matches):
     title = matches[0]
@@ -111,7 +115,8 @@ pa_list = [
     (str.split("who produced %"), artist_by_title),
     (str.split("who was the artist of %"), artist_by_title),
     (str.split("what songs were produced by %"), title_by_artist),
-    (str.split("when was % made"), year_by_title)
+    (str.split("when was % made"), year_by_title),
+    (str.split("what songs are the genre _"), title_by_genre)
 ]
 
 
