@@ -1,4 +1,3 @@
-import string
 import listener
 from faster_whisper import WhisperModel
 import os
@@ -8,26 +7,24 @@ model_size = "small.en"
 model = WhisperModel(model_size, device="cpu", num_workers=os.cpu_count())
 
 
-def remove_punctuation(text):
-    translator = str.maketrans('', '', string.punctuation)
-    return text.translate(translator)
-
-
 def audio_callback(file_name):
     segments, info = model.transcribe(
         file_name, beam_size=5, language="en", vad_filter=True)
+    os.remove(file_name)
 
     text = ""
     for segment in segments:
         text += segment.text
 
-    text = text.lower().strip()
-    text = remove_punctuation(text).split()
-    os.remove(file_name)
+    print("What you said: " + text)
+
+    text = text.lower().strip()[:-1]
 
     if text == "bye":
         print("BYEBYE!!")
-        exit()
+        raise KeyboardInterrupt
+
+    text = text.split()
 
     chatbot.query(text)
 
